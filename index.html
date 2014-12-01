@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript" src="game.js"></script>
+
+<style>
+canvas {
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<script>
+
+var context;
+function createCanvas() {
+    var canvas = document.createElement("CANVAS");
+	canvas.width = 700;
+	canvas.height = 500;
+	context = canvas.getContext("2d");
+	document.body.appendChild(canvas);
+}
+
+createCanvas();
+
+function drawRect(){
+	context.fillStyle = "#B6FCD5";
+	context.fillRect(50, 50, 100, 100);
+}
+
+window.onmousedown = mousedown;
+
+function mousedown(){
+	drawRect();
+}
+
+
+</script>
+
+</body>
+</html>
+
+
